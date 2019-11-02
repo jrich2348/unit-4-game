@@ -16,24 +16,24 @@ $(document).ready(function () {
 
     for (var i = 0; i < crystalArray.length; i++) {
 
-        // For each iteration, we will create an imageCrystal
+        // For each iteration, create an imageCrystal
         var imageStone = $("<img>");
 
-        // First each crystal will be given the class ".crystal-image".
-        // This will allow the CSS to take effect.
+        // each crystal will be given the class .crystal-image.
+        
         imageStone.addClass("gem-stone");
 
-        // Each imageCrystal will be given a src link to the crystal image
+        // Each image will be given a src link to the crystal image
         imageStone.attr("src", crystalArray[i]);
 
         // Each imageCrystal will be given a data attribute called data-crystalValue.
-        // This data attribute will be set equal to the array value.
+       
         imageStone.attr("data-stoneValue", Math.floor(Math.random() * 12) + 1);
         imageStone.attr("height", "200px");
         imageStone.attr("width", "200px");
 
 
-        // Lastly, each crystal image (with all it classes and attributes) will get added to the page.
+        // each crystal image  will get added to the page.
         $("#gem-stones").append(imageStone);
     }
 
